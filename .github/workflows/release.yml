@@ -11,6 +11,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
         with:
@@ -21,9 +23,10 @@ jobs:
       - run: cmake --build . --target test
       - run: cmake --build . --target package
       - name: Create Release
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: v${{ github.run_number }}
-          files: ./helloworld-0.0.${{ github.run_number }}-Linux.deb
+        run: |
+          gh release create v${{ github.run_number }} \
+            ./helloworld-0.0.${{ github.run_number }}-Linux.deb \
+            --title "Release ${{ github.run_number }}" \
+            --generate-release-notes || echo "Release already exists"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
