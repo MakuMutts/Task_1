@@ -1,0 +1,7 @@
+C:/Users/kazmi/Task_1/Task_1/build/CMakeFiles/helloworld_cli.dir
+C:/Users/kazmi/Task_1/Task_1/build/CMakeFiles/helloworld.dir
+C:/Users/kazmi/Task_1/Task_1/build/CMakeFiles/PACKAGE.dir
+C:/Users/kazmi/Task_1/Task_1/build/CMakeFiles/RUN_TESTS.dir
+C:/Users/kazmi/Task_1/Task_1/build/CMakeFiles/INSTALL.dir
+C:/Users/kazmi/Task_1/Task_1/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/kazmi/Task_1/Task_1/build/CMakeFiles/ZERO_CHECK.dir
