@@ -51,9 +51,11 @@ if (MSVC)
     target_compile_options(helloworld PRIVATE
         /W4
     )
-    target_compile_options(test_version PRIVATE
-        /W4
-    )
+    if(Boost_FOUND)
+        target_compile_options(test_version PRIVATE
+            /W4
+        )
+    endif()
 else ()
     target_compile_options(helloworld_cli PRIVATE
         -Wall -Wextra -pedantic -Werror
@@ -61,9 +63,11 @@ else ()
     target_compile_options(helloworld PRIVATE
         -Wall -Wextra -pedantic -Werror
     )
-    target_compile_options(test_version PRIVATE
-        -Wall -Wextra -pedantic -Werror
-    )
+    if(Boost_FOUND)
+        target_compile_options(test_version PRIVATE
+            -Wall -Wextra -pedantic -Werror
+        )
+    endif()
 endif()
 
 
